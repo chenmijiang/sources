@@ -1,0 +1,21 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "source_babel",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/source_babel/index.js",
+      "cwd": "${workspaceFolder}/source_babel",
+      // 解决 source map 路径问题
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/source_babel/**",
+        "${workspaceFolder}/source_babel/node_modules/**"
+      ]
+    }
+  ]
+}
