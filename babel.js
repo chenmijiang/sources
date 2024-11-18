@@ -3,26 +3,26 @@ const traverse = require('@babel/traverse').default;
 const generate = require('@babel/generator').default;
 const types = require('@babel/types');
 
-const source = `
-    console.log(1);
+const codeString = `
+  console.log(1);
 
-    function func() {
-        console.info(2);
-    }
+  function func() {
+    console.info(2);
+  }
 
-    export default class Clazz {
-        say() {
-            console.debug(3);
-        }
-        render() {
-            return <div>{console.error(4)}</div>
-        }
+  export default class Clazz {
+    say() {
+      console.debug(3);
     }
+  }
+
+  export function Component() {
+    return <div>123</div>
+  }
 `;
 
-const ast = parser.parse(source, {
+const ast = parser.parse(codeString, {
   sourceType: 'unambiguous',
-  plugins: ['jsx']
 });
 
 traverse(ast, {
