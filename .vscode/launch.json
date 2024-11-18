@@ -5,16 +5,16 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "source_babel",
+      "name": "babel",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/source_babel/index.js",
-      "cwd": "${workspaceFolder}/source_babel",
+      "program": "${workspaceFolder}/babel.js",
+      "cwd": "${workspaceFolder}",
       // 解决 source map 路径问题
       "resolveSourceMapLocations": [
-        "${workspaceFolder}/source_babel/**",
-        "${workspaceFolder}/source_babel/node_modules/**"
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/node_modules/**"
       ]
     }
   ]
