@@ -1,26 +1,25 @@
 # dotenv
 
-这是一个 Node.js 的 dotenv 库的核心实现文件。dotenv 是一个非常流行的环境变量管理工具。
-
+[dotenv](https://github.com/motdotla/dotenv) 是一个非常流行的环境变量管理工具。
 
 ## 核心功能
 
-- 从 .env 文件加载环境变量
-- 支持加密的 .env.vault 文件
-- 将环境变量解析并注入到 process.env 中
+- 从 `.env` 文件加载环境变量
+- 支持加密的 `.env.vault` 文件
+- 将环境变量解析并注入到 `process.env` 中
 
 ## 主要函数
 
-- parse(): 解析 .env 文件内容，将其转换为对象
-- config(): 主要入口函数，负责加载环境变量
-- configDotenv(): 处理普通的 .env 文件
-- _configVault(): 处理加密的 .env.vault 文件
-decrypt(): 解密加密的环境变量
-- populate(): 将解析后的变量注入到 process.env 中
+- `parse()`: 解析 `.env` 文件内容，将其转换为对象
+- `config()`: 主要入口函数，负责加载环境变量
+- `configDotenv()`: 处理普通的 `.env` 文件
+- `_configVault()`: 处理加密的 `.env.vault` 文件
+- `decrypt()`: 解密加密的环境变量
+- `populate()`: 将解析后的变量注入到 `process.env` 中
 
 ## 特殊功能
 
-- 支持多个 .env 文件路径
+- 支持多个 `.env` 文件路径
 - 支持加密存储（使用 AES-256-GCM 加密）
 - 支持密钥轮换（通过逗号分隔的多个密钥）
 - 支持自定义编码
@@ -34,21 +33,21 @@ decrypt(): 解密加密的环境变量
 
 ## 配置选项
 
-- path: 自定义 .env 文件路径
-- encoding: 文件编码
-- debug: 调试模式
-- override: 是否覆盖已存在的环境变量
-- DOTENV_KEY: 用于解密的密钥
+- `path`: 自定义 `.env` 文件路径
+- `encoding`: 文件编码
+- `debug`: 调试模式
+- `override`: 是否覆盖已存在的环境变量
+- `DOTENV_KEY`: 用于解密的密钥
 
-## 执行流程解析
+## 使用示例
 
-```ts
+```js
 import dotenv from 'dotenv'
 
 dotenv.config()
-
-console.log(process.env)
 ```
+
+## 执行流程解析
 
 1. 入口点: 首先从 `config()` 函数开始
 
@@ -152,7 +151,6 @@ function populate (processEnv, parsed, options = {}) {
 ```
 
 ### 流程总结
-
 
 1. 调用 `config()`
 2. 确定 .env 文件位置（默认是当前目录的 .env）
