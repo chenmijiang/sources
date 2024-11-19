@@ -1,4 +1,4 @@
-import Fuse from '../dist/fuse.mjs'
+import Fuse from '../src/entry'
 import Books from './fixtures/books.json' assert { type: 'json' }
 
 const idx = (result) => result.map((obj) => obj.refIndex)

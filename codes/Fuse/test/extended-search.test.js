@@ -1,4 +1,4 @@
-import Fuse from '../dist/fuse.mjs'
+import Fuse from '../src/entry'
 
 describe('Searching using extended search', () => {
   const list = [

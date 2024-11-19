@@ -1,4 +1,4 @@
-import Fuse from '../dist/fuse.mjs'
+import Fuse from '../src/entry'
 
 const defaultList = ['Stove', 'My good friend Steve from college']
 const defaultOptions = {}

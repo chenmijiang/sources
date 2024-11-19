@@ -32,16 +32,26 @@ async function buildEntry(config) {
   const output = config.output
   const { file, banner } = output
   const isProd = /(min|prod)\.(?:c|m)?js$/.test(file)
+  const fileName = path.basename(file)
 
   try {
     let bundle = await rollup.rollup(config)
     let {
-      output: [{ code }]
+      output: [{ code, map }]
     } = await bundle.generate(output)
 
-    return isProd
-      ? write(file, await minify(banner, code), true)
-      : write(file, code)
+    if (isProd) {
+      const minified = await minify(banner, code + '\n//# sourceMappingURL=' + fileName + '.map')
+      write(file, minified, true)
+      if (map) {
+        write(`${file}.map`, map.toString())
+      }
+    } else {
+      write(file, code + '\n//# sourceMappingURL=' + fileName + '.map')
+      if (map) {
+        write(`${file}.map`, map.toString())
+      }
+    }
   } catch (err) {
     throw new Error(err)
   }

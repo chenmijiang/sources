@@ -43,7 +43,7 @@ const builds = {
   },
   // UMD production build
   'umd-prod-full': {
-    dest: `dist/${FILENAME}.min.js`,
+    dest: resolve(`dist/${FILENAME}.min.js`),
     format: 'umd',
     env: 'production',
     features: {
@@ -52,12 +52,12 @@ const builds = {
   },
   // UMD basic build
   'umd-dev-basic': {
-    dest: `dist/${FILENAME}.basic.js`,
+    dest: resolve(`dist/${FILENAME}.basic.js`),
     format: 'umd',
     env: 'development'
   },
   'umd-prod-basic': {
-    dest: `dist/${FILENAME}.basic.min.js`,
+    dest: resolve(`dist/${FILENAME}.basic.min.js`),
     format: 'umd',
     env: 'production'
   },
@@ -146,7 +146,14 @@ function genConfig(options) {
       file: resolve(options.dest),
       format: options.format,
       name: 'Fuse',
-      exports: 'default'
+      exports: 'default',
+      sourcemap: true,
+      sourcemapExcludeSources: false,
+      // 修改 sourcemapPathTransform 的处理方式
+      sourcemapPathTransform: (relativePath) => {
+        // 改成绝对路径
+        return path.resolve(__dirname, '../', relativePath)
+      }
     }
   }
 
@@ -165,7 +172,7 @@ function genConfig(options) {
   config.plugins.push(replace(vars))
 
   if (options.transpile !== false) {
-    config.plugins.push(babel({ babelHelpers: 'bundled' }))
+    config.plugins.push(babel({ babelHelpers: 'bundled', sourceMaps: true }))
   }
 
   return config
