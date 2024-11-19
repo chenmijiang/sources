@@ -1,0 +1,60 @@
+// Vitest Snapshot v1
+
+exports[`Logical parser > Implicit operations 1`] = `
+{
+  "children": [
+    {
+      "keyId": "title",
+      "pattern": "old war",
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "keyId": "title",
+              "pattern": "!arts",
+            },
+            {
+              "keyId": "tags",
+              "pattern": "kiro",
+            },
+          ],
+          "operator": "$and",
+        },
+        {
+          "keyId": "title",
+          "pattern": "^lock",
+        },
+      ],
+      "operator": "$or",
+    },
+  ],
+  "operator": "$and",
+}
+`;
+
+exports[`Logical parser > Tree structure 1`] = `
+{
+  "children": [
+    {
+      "keyId": "title",
+      "pattern": "old war",
+    },
+    {
+      "children": [
+        {
+          "keyId": "title",
+          "pattern": "!arts",
+        },
+        {
+          "keyId": "title",
+          "pattern": "^lock",
+        },
+      ],
+      "operator": "$or",
+    },
+  ],
+  "operator": "$and",
+}
+`;

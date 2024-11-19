@@ -5,3 +5,8 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 *.log
+
+dist/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

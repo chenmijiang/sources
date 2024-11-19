@@ -1,0 +1,631 @@
+// Vitest Snapshot v1
+
+exports[`Searching using extended search > Search: all 1`] = `
+[
+  {
+    "item": {
+      "text": "smithee",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            6,
+          ],
+          [
+            0,
+            6,
+          ],
+        ],
+        "key": "text",
+        "value": "smithee",
+      },
+    ],
+    "refIndex": 4,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "smith",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "smith",
+      },
+    ],
+    "refIndex": 5,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "hello word",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            9,
+          ],
+          [
+            0,
+            9,
+          ],
+        ],
+        "key": "text",
+        "value": "hello word",
+      },
+    ],
+    "refIndex": 0,
+    "score": 8.569061098350962e-12,
+  },
+  {
+    "item": {
+      "text": "I am fine",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            8,
+          ],
+          [
+            0,
+            8,
+          ],
+        ],
+        "key": "text",
+        "value": "I am fine",
+      },
+    ],
+    "refIndex": 3,
+    "score": 9.287439764962262e-10,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: exact-match 1`] = `
+[
+  {
+    "item": {
+      "text": "smith",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "smith",
+      },
+    ],
+    "refIndex": 5,
+    "score": 2.220446049250313e-16,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: include-match 1`] = `
+[
+  {
+    "item": {
+      "text": "hello word",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "hello word",
+      },
+    ],
+    "refIndex": 0,
+    "score": 8.569061098350962e-12,
+  },
+  {
+    "item": {
+      "text": "indeed fine hello foo",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            12,
+            16,
+          ],
+        ],
+        "key": "text",
+        "value": "indeed fine hello foo",
+      },
+    ],
+    "refIndex": 2,
+    "score": 1.4901161193847656e-8,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: inverse-exact-match 1`] = `
+[
+  {
+    "item": {
+      "text": "smithee",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            6,
+          ],
+        ],
+        "key": "text",
+        "value": "smithee",
+      },
+    ],
+    "refIndex": 4,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "smith",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "smith",
+      },
+    ],
+    "refIndex": 5,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "hello word",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            9,
+          ],
+        ],
+        "key": "text",
+        "value": "hello word",
+      },
+    ],
+    "refIndex": 0,
+    "score": 8.569061098350962e-12,
+  },
+  {
+    "item": {
+      "text": "how are you",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            10,
+          ],
+        ],
+        "key": "text",
+        "value": "how are you",
+      },
+    ],
+    "refIndex": 1,
+    "score": 9.287439764962262e-10,
+  },
+  {
+    "item": {
+      "text": "I am fine",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            8,
+          ],
+        ],
+        "key": "text",
+        "value": "I am fine",
+      },
+    ],
+    "refIndex": 3,
+    "score": 9.287439764962262e-10,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: inverse-prefix-exact-match 1`] = `
+[
+  {
+    "item": {
+      "text": "smithee",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            6,
+          ],
+        ],
+        "key": "text",
+        "value": "smithee",
+      },
+    ],
+    "refIndex": 4,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "smith",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "smith",
+      },
+    ],
+    "refIndex": 5,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "how are you",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            10,
+          ],
+        ],
+        "key": "text",
+        "value": "how are you",
+      },
+    ],
+    "refIndex": 1,
+    "score": 9.287439764962262e-10,
+  },
+  {
+    "item": {
+      "text": "I am fine",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            8,
+          ],
+        ],
+        "key": "text",
+        "value": "I am fine",
+      },
+    ],
+    "refIndex": 3,
+    "score": 9.287439764962262e-10,
+  },
+  {
+    "item": {
+      "text": "indeed fine hello foo",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            20,
+          ],
+        ],
+        "key": "text",
+        "value": "indeed fine hello foo",
+      },
+    ],
+    "refIndex": 2,
+    "score": 1.4901161193847656e-8,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: inverse-suffix-exact-match 1`] = `
+[
+  {
+    "item": {
+      "text": "smithee",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            6,
+          ],
+        ],
+        "key": "text",
+        "value": "smithee",
+      },
+    ],
+    "refIndex": 4,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "smith",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "smith",
+      },
+    ],
+    "refIndex": 5,
+    "score": 2.220446049250313e-16,
+  },
+  {
+    "item": {
+      "text": "hello word",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            9,
+          ],
+        ],
+        "key": "text",
+        "value": "hello word",
+      },
+    ],
+    "refIndex": 0,
+    "score": 8.569061098350962e-12,
+  },
+  {
+    "item": {
+      "text": "how are you",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            10,
+          ],
+        ],
+        "key": "text",
+        "value": "how are you",
+      },
+    ],
+    "refIndex": 1,
+    "score": 9.287439764962262e-10,
+  },
+  {
+    "item": {
+      "text": "I am fine",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            8,
+          ],
+        ],
+        "key": "text",
+        "value": "I am fine",
+      },
+    ],
+    "refIndex": 3,
+    "score": 9.287439764962262e-10,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: literal match with fuzzy match 1`] = `
+[
+  {
+    "item": {
+      "text": "indeed fine hello foo",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            10,
+          ],
+          [
+            18,
+            20,
+          ],
+        ],
+        "key": "text",
+        "value": "indeed fine hello foo",
+      },
+    ],
+    "refIndex": 2,
+    "score": 1.4901161193847656e-8,
+  },
+  {
+    "item": {
+      "text": "hello word",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "hello word",
+      },
+    ],
+    "refIndex": 0,
+    "score": 0.3205001277290518,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: literal match with regular match 1`] = `
+[
+  {
+    "item": {
+      "text": "how are you",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            4,
+            6,
+          ],
+        ],
+        "key": "text",
+        "value": "how are you",
+      },
+    ],
+    "refIndex": 1,
+    "score": 9.287439764962262e-10,
+  },
+  {
+    "item": {
+      "text": "indeed fine hello foo",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            10,
+          ],
+          [
+            18,
+            20,
+          ],
+        ],
+        "key": "text",
+        "value": "indeed fine hello foo",
+      },
+    ],
+    "refIndex": 2,
+    "score": 1.4901161193847656e-8,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: prefix-exact-match 1`] = `
+[
+  {
+    "item": {
+      "text": "hello word",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+        ],
+        "key": "text",
+        "value": "hello word",
+      },
+    ],
+    "refIndex": 0,
+    "score": 8.569061098350962e-12,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: single literal match 1`] = `
+[
+  {
+    "item": {
+      "text": "indeed fine hello foo",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            0,
+            10,
+          ],
+        ],
+        "key": "text",
+        "value": "indeed fine hello foo",
+      },
+    ],
+    "refIndex": 2,
+    "score": 1.4901161193847656e-8,
+  },
+]
+`;
+
+exports[`Searching using extended search > Search: suffix-exact-match 1`] = `
+[
+  {
+    "item": {
+      "text": "I am fine",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            5,
+            8,
+          ],
+        ],
+        "key": "text",
+        "value": "I am fine",
+      },
+    ],
+    "refIndex": 3,
+    "score": 9.287439764962262e-10,
+  },
+]
+`;
