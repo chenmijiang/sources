@@ -14,7 +14,8 @@ export default class Fuse {
 
     if (
       this.options.useExtendedSearch &&
-      !process.env.EXTENDED_SEARCH_ENABLED
+      // !process.env.EXTENDED_SEARCH_ENABLED
+      false
     ) {
       throw new Error(ErrorMsg.EXTENDED_SEARCH_UNAVAILABLE)
     }

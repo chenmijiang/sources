@@ -1,0 +1,115 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Demo > Demo 1`] = `
+[
+  {
+    "item": {
+      "name": "most-popular",
+      "subSections": [
+        {
+          "description": "Find the parents of the issues returned from the subquery (defined in parentheses).",
+          "examples": [
+            {
+              "note": "Find all the parents of epics in my ACME project:",
+              "snippet": [
+                "issue in parentsOfIssuesInQuery("project='ACME' and type=Epic")",
+              ],
+            },
+          ],
+          "name": "parentsOfIssuesInQuery",
+        },
+        {
+          "description": "Find issues linked to the issues returned from the subquery (defined in parentheses).",
+          "examples": [
+            {
+              "note": "Finds issues that block my project ACME:",
+              "snippet": [
+                "issue in linkedIssuesOfQuery("project=ACME", "is blocked by")",
+              ],
+            },
+            {
+              "note": "Finds issues that are linked with epics that are in To Do:",
+              "snippet": [
+                "issue in linkedIssuesOfQuery("type=Epic AND status='To Do'")",
+              ],
+            },
+          ],
+          "name": "linkedIssuesOfQuery",
+        },
+      ],
+      "title": "Most popular functions and keywords",
+    },
+    "matches": [
+      {
+        "indices": [
+          [
+            6,
+            11,
+          ],
+        ],
+        "key": "subSections.examples.note",
+        "refIndex": 2,
+        "value": "Finds issues that are linked with epics that are in To Do:",
+      },
+      {
+        "indices": [
+          [
+            6,
+            11,
+          ],
+        ],
+        "key": "subSections.examples.note",
+        "refIndex": 1,
+        "value": "Finds issues that block my project ACME:",
+      },
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+          [
+            15,
+            20,
+          ],
+        ],
+        "key": "subSections.examples.snippet",
+        "refIndex": 2,
+        "value": "issue in linkedIssuesOfQuery("type=Epic AND status='To Do'")",
+      },
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+          [
+            15,
+            20,
+          ],
+        ],
+        "key": "subSections.examples.snippet",
+        "refIndex": 1,
+        "value": "issue in linkedIssuesOfQuery("project=ACME", "is blocked by")",
+      },
+      {
+        "indices": [
+          [
+            0,
+            4,
+          ],
+          [
+            18,
+            24,
+          ],
+        ],
+        "key": "subSections.examples.snippet",
+        "refIndex": 0,
+        "value": "issue in parentsOfIssuesInQuery("project='ACME' and type=Epic")",
+      },
+    ],
+    "refIndex": 0,
+    "score": 0.07949438992786684,
+  },
+]
+`;

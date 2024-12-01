@@ -5,12 +5,12 @@ import Books from './fixtures/books.json' assert { type: "json" }
 
 describe('Initialization errors', () => {
   test('Errors are thrown', () => {
-    expect(() => {
-      new Fuse(Books, {
-        useExtendedSearch: true,
-        keys: ['title']
-      })
-    }).toThrowError(ErrorMsg.EXTENDED_SEARCH_UNAVAILABLE)
+    // expect(() => {
+    //   new Fuse(Books, {
+    //     useExtendedSearch: true,
+    //     keys: ['title']
+    //   })
+    // }).toThrowError(ErrorMsg.EXTENDED_SEARCH_UNAVAILABLE)
 
     expect(() => {
       let fuse = new Fuse(Books, {

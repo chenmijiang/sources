@@ -14,8 +14,8 @@ if (process.env.NODE_ENV === 'development') {
   Fuse.parseQuery = parse
 }
 
-if (process.env.EXTENDED_SEARCH_ENABLED) {
+// if (process.env.EXTENDED_SEARCH_ENABLED) {
   register(ExtendedSearch)
-}
+// }
 
 export default Fuse
