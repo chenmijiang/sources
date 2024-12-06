@@ -75,7 +75,7 @@
     "dist": "npm run dist-dev && java -jar node_modules/google-closure-compiler/compiler.jar --warning_level QUIET --compilation_level SIMPLE_OPTIMIZATIONS --js dist/jsmediatags.js > dist/jsmediatags.min.js"
   },
   "jest": {
-    "rootDir": "./src",
+    "rootDir": "./build2",
     "timers": "fake",
     "transform": {
       ".js$": "babel-jest"
